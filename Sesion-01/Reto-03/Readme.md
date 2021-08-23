@@ -28,3 +28,4 @@ P1(4,3), P2(-3,-2)
 ##### 4. Encontrar una solución para que se refleje el resultado
 
 
+[`Atrás`](../Ejemplo-04) | [`Siguiente`](../Readme.md)

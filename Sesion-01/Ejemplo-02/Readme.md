@@ -97,3 +97,5 @@ mostrando en consola:
 >7
 
 >24
+
+[`Atrás`](../Reto-01) | [`Siguiente`](../Ejemplo-03)

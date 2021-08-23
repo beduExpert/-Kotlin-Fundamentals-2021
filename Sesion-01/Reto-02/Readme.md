@@ -26,5 +26,5 @@ Para multiplicar adelantaremos el uso del operador de multiplicación  * y su us
 
 ##### 4. para el ejemplo anterior, utilizar un *String Template* para imprimir el texto *El perímetro del círculo es: [resultado]* siendo resultado nuestra variable perímetro
 
-
+[`Atrás`](../Ejemplo-03) | [`Siguiente`](../Ejemplo-04)
 
