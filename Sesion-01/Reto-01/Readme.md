@@ -11,8 +11,9 @@
 
 #### DESARROLLO
 
-En este ejercicio te vamos a enseñar una herramienta online para correr código kotlin en línea.
-Puedes ocupar este sitio para probar algún snippet que obtuviste de stackoverflow para comprobar que te sea útil o si estás en una máquina
+En este ejercicio vamos a usar  una herramienta online para correr código kotlin.
+
+Puedes utilizar este sitio si estás en una máquina
 donde no tienes instalado IntelliJ IDEA y requieres crear rápidmante un archivo.
 
 Puedes acceder al sitio [haciendo click aquí](https://play.kotlinlang.org)
@@ -20,8 +21,8 @@ Puedes acceder al sitio [haciendo click aquí](https://play.kotlinlang.org)
 En esta consola haremos lo siguiente: 
 
 1. Imprimir el mismo mensaje que imprimimos en el [Ejemplo 1](../Ejemplo-01)
-2. Abajo de la linea de código de la tarea 1) , poner otro mensaje en consola ¿Qúe pasa con los dos mensajes?
-3. ahora utiliza *println* e imprime alguna otra cosa, qué diferencia hay con *print* ?
+2. Dentro de la misma función `main` imprimir otro mensaje en consola ¿Qúe pasa con los dos mensajes?
+3. Ahora utiliza *println* e imprime alguna otra cosa, qué diferencia hay con *print* ?
 
 
 **BONUS:**
