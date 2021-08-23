@@ -18,6 +18,6 @@
 - [Ejemplo 04: Operadores](Ejemplo-04)
 	- [Reto 03](Reto-03)
 
-- [Reto final - Inicialización del proyecto](./Reto-final)
+<!-- - [Reto final - Inicialización del proyecto](./Reto-final) -->
 <!-- - [Postwork](Postwork) -->
 
