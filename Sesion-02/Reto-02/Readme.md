@@ -42,37 +42,15 @@ fun tipoDeTriangulo(lado1: Int, lado2: Int, lado3: Int){
 
 </details>
 
-2. Con ***When*** identificar si el tipo de dato es:
-
-* String
-* Int
-* Double
-* Otro
-
-El Tipo de dato ***Any*** permite recibir cualquier tipo de dato
-imprimir los resultados, no olvidar que saber el tipo de dato se logra mediante:
+2. Utilizando ***When*** define una función que recibe un número entero y te regresa el mes que representa, por ejemplo:
 
 ```kotlin
-is <TipoDeDato>
+mes(5) = "mayo"
 ```
 
-Testear la función con diversos tipos de datos
+recuerda tratar con el caso de los número que no representan meses
 
-<details>
-	<summary>Solución</summary>
-	
-```kotlin
-fun tipoDeDato(dato: Any){
-    when(dato){
-        is String -> println("Es una String")
-        is Int -> println("Es un Entero")
-        is Double -> println("Es un Doble")
-        else -> println("Tipo de dato no soportado")
-    }
-}
-```
 
-</details>
 
 [`Atrás`](../Ejemplo-02) | [`Siguiente`](../Ejemplo-03)
 

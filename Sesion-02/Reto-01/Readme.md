@@ -15,7 +15,7 @@
 1. Crear una función que calcule el área de un rectángulo por medio de su base y altura, implementarla en *main*
 2. Crear otra función para calcular el volumen de un prisma rectangular, utilizar la función de área
 
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 Respuesta a 1)
@@ -49,7 +49,7 @@ fun volumenPrisma(base: Float, altura:Float, ancho: Float):Float{
 }
 ```
 
-</details>
+</details> -->
 
 3. Una función puede tener parámetros con valores por defecto en caso de que no se setee ninguno, a continuación cómo se implementa: 
 
@@ -79,7 +79,7 @@ Correr los ejemplos anteriores
 
 4. Con el ejemplo anterior, crear una función que entregue el promedio de tres calificaciones. Esta debe recibir dos parámetros con calificaciones por defecto 8, y el tercer parámetro no debe venir predefinido. 
 
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 ```kotlin
@@ -90,11 +90,11 @@ fun promedio(primera: Float = 8f,
 }
 
 ```
-</details>
+</details> -->
 
 5. Utilizar la función *promedio*, Comentar qué pasa si se ingresa sólo una calificación en la función y después con dos. Finalmente, buscar que la función corra enviando únicamente la tercera calificación con 10f:
 
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 ```kotlin
@@ -105,9 +105,7 @@ el resultado debe ser:
 
 > El promedio del alumno es 8.666667
 
-</details>
-
-6. **OPCIONAL:** Buscar una forma de redondear la calificación
+</details> -->
 
 [`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)
 

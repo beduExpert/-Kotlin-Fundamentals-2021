@@ -14,10 +14,10 @@ Aprenderemos a decidir qué hacer según el valor de una variable
 
 ##### Operador if
 
-el operador ***if*** funciona a través de un valor Booleano como parámetro: sólo si recibe true, se ejecuta la sentencia.
+el operador ***if*** funciona a través de un valor Booleano como guardia: sólo si se evalúa as `true`, se ejecuta la sentencia.
 
 ```kotlin
-if(true){
+    if(true){
         println("Siempre se ejecutará esta sentencia")
     }
 
@@ -30,7 +30,7 @@ Y en efecto, al ejecutar el código anterior, se imprime:
 
 > Siempre se ejecutará esta sentencia
 
-Vamos a crear una función que nos diga si somos mayores de edad, utilizaremos la función *readLine()* para obtener la edad tecleándola en consola (ignorar el símbolo ? por ahora), con la función *toInt()* hacemos el parseo de *String* a *Int* :
+Vamos a crear una función que nos diga si somos mayores de edad, utilizaremos la función *readLine()* para obtener la edad tecleándola en consola (ignorar el símbolo ? por ahora), con *toInt()* hacemos el parseo de *String* a *Int* :
 
 
 ```kotlin
@@ -49,15 +49,19 @@ y lo corremos en el main. Ingresa 18, en consola debe salir:
 > Ya eres mayor de edad!
 
 ahora, reemplazaremos el operador *==* por la función ***equals(18)*** , por ahora ignorar los símbolos *?* y *!!* 
-if(age?.equals(18)!!){
+
+```kotlin
+    if(age?.equals(18)!!){
         println("Ya eres mayor de edad!")
     }
+```
+
 
 Ahora teclea 19 o más, ¿Qué sucede? el resultado no se imprime porque sólo cuando tienes 18 saldrá el mensaje, pero la condición es que 
 si tenemos 18 o más nos debe mostrar el mensaje. Cambiaremos por tanto el operador *==* por mayor o igual **>=**
 
 ```kotlin
-if(age!! >=18){
+    if(age!! >=18){
         println("Ya eres mayor de edad!")
     }
 ```

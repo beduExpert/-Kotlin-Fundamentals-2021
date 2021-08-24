@@ -12,7 +12,7 @@
 
 ##### For
 
-El ciclo **for** itera sobre todos los elementos de cualquier objeto que proveea un *iterator*, que son objetos que pueden regresar secuencialmente sus elementos, heredando de *Iterable<T>*. Las listas son un ejemplo.
+El ciclo **for** itera sobre todos los elementos de cualquier objeto que provee a un *iterator*, que son objetos que pueden recorrer secuencialmente sus elementos. Los rangos son un ejemplo.
 	
 El ejemplo mas práctico sería imprimir un rango de números del 1 al 5 con esete ciclo:
 
@@ -96,7 +96,7 @@ por supuesto el loop se detendrá al encontrar el nombre Link.
 
 ##### While
 
-Los ciclos while mantienen el ciclo hasta que la condición dentro de él:
+Los ciclos while mantienen el ciclo hasta que la condición dentro de él se evalua a `false`:
 
 ```kotlin
 var x = 20

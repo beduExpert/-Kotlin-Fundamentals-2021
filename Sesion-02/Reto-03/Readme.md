@@ -11,11 +11,14 @@
 #### DESARROLLO
 
 
-1. Crear y utilizar una función que regrese el número de veces que se repite un nombre en la siguiente lista de nombres:
+1. Crear y utilizar una función que regrese el número de veces que se encuentra un nombre en la siguiente lista:
 
 Pedro Luis, Juan Manuel, Juan Luis, María Inés, Romeo, Ernesto, Juan Pedro, Ariadna, Mireya María, Ana Sofía, José Juan
 
-<details>
+> Sugerencia 
+> ve que regresa la evaluación de esta expresión `"Juan" in "Juan Luis"`
+
+<!-- <details>
 	<summary>Solución</summary>
 	
 Primeramente declaramos nuestra lista: 
@@ -56,7 +59,7 @@ val nameCount = countName("Juan")
 println("Tu nombre se encontró $nameCount veces")
 ```
 
-</details>
+</details> -->
 
 
 
@@ -82,7 +85,7 @@ do {
 adaptar el código del while a esta nueva forma y describir la diferencia entre las dos.
 
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 	
 ```kotlin
@@ -94,7 +97,7 @@ var y = 20
 ```
 La diferencia es que while checa la condición al inicio y do-while al final
 	
-</details>
+</details> -->
 
 [`Atrás`](../Ejemplo-03) | [`Siguiente`](../Ejemplo-04)
 

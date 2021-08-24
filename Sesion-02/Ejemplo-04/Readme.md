@@ -23,12 +23,12 @@ Los elementos en una lista sí están ordenados y sus índices van desde 0 que e
 ```kotlin
     val numeros = listOf("one", "two", "three", "four", "five")
 ```
-Un arreglo puede imprimirse directamente
+Una lista puede imprimirse directamente
 
 ```kotlin
 println(numeros)
 ```
-El arreglo se muestra de la siguiente forma:
+Y se muestra de la siguiente forma:
 
 > [one, two, three, four, five]
 
@@ -42,11 +42,11 @@ Es realmente sencillo hacerlo, pero veamos qué hay detrás de la lista en cuant
     println("Index del elemento \"four\": ${numeros.indexOf("four")}")
 ```
 
-Si usamos este tipo **List<T>** tenemos que saber que no es mutable, es decir **no podemos alterar sus elementos**, para ello tenemos **MutableList<T>** lo cual representa una lista, a la cual sí podemos agregar, leer, eliminar o modificar sus elementos:
+Si usamos este tipo **List<T>** tenemos que saber que no es mutable, es decir **no podemos alterar sus elementos**, para ello tenemos **MutableList<T>** lo cual representa una lista sobre la cual sí podemos agregar, eliminar o modificar sus elementos:
 
 ```kotlin
 
-    val numer = mutableListOf(1, 2, 3, 4)
+    val numeros = mutableListOf(1, 2, 3, 4)
     //Abrebar nuevos elementos
     numeros.add(5)
     //Remover elementos
