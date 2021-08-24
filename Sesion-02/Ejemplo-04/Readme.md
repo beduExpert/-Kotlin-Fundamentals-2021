@@ -62,9 +62,10 @@ Como puedes notarlo, las listas son semejantes a los Arrays que ya habíamos vis
 
 #### Set
 
-Un **set** es un operación que regresa una serie de elementos **únicos**, es decir, que no se repiten. Por ejemplo, el alfabeto es un **set** de letras.
+Un **set** es una colección que regresa una serie de elementos **únicos**, es decir, que no se repiten. Por ejemplo, el alfabeto es un **set** de letras.
+
 Un set almacena elementos únicos, incluso con los valores null.
-Un conjunto regresa un set (conjunto) inmutable usamos la funcion setOf(). Esto nos creará una instancia de un conjunto, en el cual no podremos realizar operaciones de escritura. Para realizar operaciones de escritura sobre un set lo creamos con la funcion mutableSetOf()
+Para definiri un conjunto usamos la funcion setOf(). Esto nos creará una instancia de un conjunto, en el cual no podremos realizar operaciones de escritura. Para realizar operaciones de escritura sobre un set lo creamos con la funcion mutableSetOf()
 
 >Creando sets.
 ```kotlin

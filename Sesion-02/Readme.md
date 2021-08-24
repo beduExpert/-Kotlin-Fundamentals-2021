@@ -17,7 +17,7 @@
 
 - [Ejemplo 04: Estructuras de datos](Ejemplo-04)
 
-- [Reto final - Implementando programación estructurada](Reto-final)
+<!-- - [Reto final - Implementando programación estructurada](Reto-final) -->
 
 <!-- - [Postwork](Postwork) -->
 
