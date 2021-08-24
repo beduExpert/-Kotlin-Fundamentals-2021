@@ -96,3 +96,6 @@ La diferencia es que while checa la condición al inicio y do-while al final
 	
 </details>
 
+[`Atrás`](../Ejemplo-03) | [`Siguiente`](../Ejemplo-04)
+
+

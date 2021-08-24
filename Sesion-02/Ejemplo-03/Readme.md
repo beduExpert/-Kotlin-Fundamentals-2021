@@ -107,7 +107,7 @@ while (x > 0) {
 }
 ```
 
-   
+[`Atrás`](../Reto-02) | [`Siguiente`](../Reto-03)
 
 
 

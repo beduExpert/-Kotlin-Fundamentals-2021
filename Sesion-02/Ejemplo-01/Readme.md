@@ -32,7 +32,11 @@ cabe destacar que en los ejercicios anteriores (y en los que haremos después), 
 ```kotlin
 const val PI = 3.1416f
 const val PHI = 1.618f
-fun main(){ // en versiones de kotlin anteriores a la 1.3, la función recibe el valor args: Array<String> como parámetro
+fun main(){ 
+
+// en versiones de kotlin anteriores a la 1.3, 
+// la función recibe el valor args: Array<String> 
+// como parámetro obligatorio, ahora es opcional
 
 }
 ```
@@ -48,7 +52,9 @@ fun circleArea(radius:Float): Float{
     return PI*radius.pow(2)
 }
 ```
-pow es una **función** que vive en la clase float (o en otros tipos numéroicos) y eleva un número a cierta potencia (en este caso al cuadrado).
+pow es una **método** que vive en la clase float (o en otros tipos numéricos) y eleva un número a cierta potencia (en este caso al cuadrado).
+
+El concepto de método es muy parecido al de función, estudiaremos con mas detalle este concepto en sesiones siguientes.
 
 Ahora vamos a sacar el área de un círculo e imprimirlo en pantalla.
 
@@ -154,10 +160,7 @@ Sabiendo funciones locales se declaran de la misma forma que las normales,  vamo
     //Funciones locales
     fun login(user: String, password: String) : Boolean {
         fun validate(input: String): Boolean{
-            if (input.isEmpty()) {
-                return false
-            }
-            return true
+            !input.isEmpty()
         }
         val userValidated = validate(user)
         val passValidated = validate(password)
@@ -217,9 +220,11 @@ Determinamos entonces base con valor 20 y altura como 30 en caso de no pasarlos 
 para el primer ejemplo, se ocupan los valores por defecto 20x30 = 600. Para el segundo, la base es 10 y la altura es por defecto, o sea 10x30 = 300.
 
 Tenemos ahora un problema, si queremos poner únicamente la altura, no podemos hacerlo debido a que el orden de los argumentos nos obliga a poner primero la b ase para determinar la altura. Afortunadamente, los named arguments permiten pasar argumentos a funciones por medio de su nombre y prescindiendo del orden en que se declaran. Entonces, si queremos asignar únicamente altura, solo tenemos qué poner el nombre y su valor dentro de los paréntesis:
-
-//Area de rectangulo con por defecto y altura seteada con named arguments
+```kotlin
+    //Area de rectangulo con por defecto y altura seteada con named arguments
     println("Area con base por defecto: ${rectangleArea(height = 10.0)}")
+```
+
     
 En este caso, la base vale 20 y la altura 10, por lo tanto 20x10 = 200.
 
@@ -235,6 +240,6 @@ En este caso, el valor arrojado es de 2x3.5 = 7.
 Puedes intentar cambiar el orden para verificar que esto no afecta al resultado de la función.
 
 
-
+[`Atrás`](../Readme.md) | [`Siguiente`](../Reto-01)
 
 

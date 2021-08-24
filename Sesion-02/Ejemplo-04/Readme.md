@@ -97,3 +97,4 @@ Un punto importante es que cuando iteramos sobre un mapa, o sea, recorrer cada u
 ```
 Al igual que las listas (list) y los conjuntos (set) la función mapOf() nos crea un mapa inmutable. Si queremos hacer operaciones de escritura sobre un mapa tenemos que crearlo con la función mutableMapOf().
 
+[`Atrás`](../Reto-03) | [`Siguiente`](../Readme.md)

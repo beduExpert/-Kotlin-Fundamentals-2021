@@ -177,6 +177,7 @@ Probamos nuevamente con 26, tiene que imprimir lo siguiente:
 
 > Vuelve a correr el código
 
+[`Atrás`](../Reto-01) | [`Siguiente`](../Reto-02)
 
 
 

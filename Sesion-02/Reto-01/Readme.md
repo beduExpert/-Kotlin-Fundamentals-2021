@@ -109,6 +109,7 @@ el resultado debe ser:
 
 6. **OPCIONAL:** Buscar una forma de redondear la calificación
 
+[`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)
 
 
 
