@@ -16,7 +16,5 @@
 - [Ejemplo 03: Getters, Setters y modificadores de acceso](Ejemplo-03)
    - [Reto 03](Reto-03)
 
-- [Reto final - Añadiendo POO al proyecto](Reto-final)
-
 <!-- - [Postwork](Postwork) -->
 
