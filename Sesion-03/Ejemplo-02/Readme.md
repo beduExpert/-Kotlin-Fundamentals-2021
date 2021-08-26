@@ -12,19 +12,12 @@
 
 Un constructor es un método que define los atributos mínimos requeridos para crear un objeto.
 
-En el [Reto 1](../Reto-01) definimos atributos con Strings vacías
+En el [Reto 1](../Reto-01) cuando se definió un vehículo, los atributos de este no tenian valor.
 
-```kotlin
-class Vehiculo {
-    var color= ""
-    var marca = ""
-    var modelo = ""
-    var placas = ""
-    ...
-```
-El problema aquí es que un vehículo requiere tener al menos la marca, el modelo y el color definidos desde su creación porque son indispensables en su definición.
 
-Recreamos entonces esta clase para que estas tres variables queden definidas desde su creación, dentro del **Constructor primario**:
+El problema con esto es que un vehículo requiere tener al menos la marca, el modelo y el color definidos desde su creación porque son indispensables en su definición.
+
+Recreamos entonces esta clase para que sea necesario dar los valores de estas tres variables desde su creación, dentro del **Constructor primario**:
 
 ```kotlin
 class Vehiculo constructor(val marca:String, val modelo: String, var color: String) {
@@ -35,7 +28,7 @@ class Vehiculo constructor(val marca:String, val modelo: String, var color: Stri
 
 Como marca y modelo no cambian, usaremos val; el color puedes ser cambiado, por eso es var. Esto debido a que el keyword *val* implica que la variable se le asigna el valor una sola vez y es inmutable (no cambia su valor), mientras que *var* permite modificar indefinidamente su valor (mutable).
 
-Como la clase Vehiculo no tiene ninguna anotación o modificadores de visibilidad, podemos omitir el keyword *constructor*
+Podemos omitir el keyword *constructor* porque este es el constructor principal.
 
 ```kotlin
 class Vehiculo(val marca:String, val modelo: String, var color: String){
@@ -148,7 +141,7 @@ la salida es:
 
 si se omite las placas en el constructor, no se ejecutará el constructor secundario.
 
-El constructor es una función, por lo tanto tiene sus características, algunas vistas en [Este Ejemplo](../../Sesion-02/Ejemplo-01), por lo cual podríamos determinar en nuestra clase valores por defecto y usar named arguments. Vamos a poner el color negro por defecto
+El constructor tiene las mismas características que una fnción, por lo cual podríamos determinar en nuestra clase valores por defecto y usar *named arguments*. Vamos a poner el color negro por defecto
 
 ```kotlin
 class Vehiculo (val marca:String, val modelo: String, var color: String = "Negro") {
@@ -172,8 +165,6 @@ val pointer = Vehiculo(
         modelo = "Pointer"
     )
 ```
-
-el resultado debe ser impreso sin ningún detalle.
 
 
 [`Atrás`](../Reto-01) | [`Siguiente`](../Reto-02)

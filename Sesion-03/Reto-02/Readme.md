@@ -10,52 +10,15 @@
 
 #### DESARROLLO
 
-1. Crearemos una clase Person con datos de constructor: 
+1. Crear una clase Persona con un constructor que reciba los parámetros: 
 
 * Nombre
 * Apellidos
-* Sexo
-* Altura
+* Telefono
+* e-mail
 
-<details>
-	<summary>Solución</summary>
-
-la clase es la siguiente: 
-
-```kotlin
-package ` clases`
-
-class Person (val name:String,val apellidos: String, val sexo: String,val altura: Float) {
-
-    init {
-        println("""
-            valor edición: 
-             nombre: $name,
-             apellidos: $apellidos,
-             sexo: $sexo,
-             altura: $altura
-        """.trimIndent())
-    }
+Y en el mismo constructor los imprima en la consola.
 
 
-}
-
-```
-
-Para crear una instancia de la clase:
-
-```kotlin
-fun main(){
-
-    val person = Person(
-        "Daniel",
-        "Bedu",
-        "Masculino",
-        1.78f)
-
-}
-```
-
-</details>
 
 [`Atrás`](../Ejemplo-02) | [`Siguiente`](../Ejemplo-03)
