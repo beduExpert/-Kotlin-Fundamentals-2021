@@ -57,3 +57,5 @@ fun main(){
 ```
 
 </details>
+
+[`Atrás`](../Ejemplo-02) | [`Siguiente`](../Ejemplo-03)

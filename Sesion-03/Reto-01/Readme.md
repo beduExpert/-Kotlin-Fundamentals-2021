@@ -10,7 +10,7 @@
 
 #### DESARROLLO
 
-1. Crear una clase que represente un vehículo, que tenga las siguientes propiedades:
+1. Crear una clase que represente un vehículo, que tenga los siguientes atributos:
 
 * Color
 * Marca
@@ -18,81 +18,23 @@
 * placas
 * encendido (prendido o apagado)
 * Gasolina
+
+
+Y los siguientes métodos 
+
 * Encender
 * Apagar
-* Recargar
-
-<details>
-	<summary>Solución</summary>
-	
-```kotlin
-class Vehiculo {
-    var color= ""
-    var marca = ""
-    var modelo = ""
-    var placas = ""
-    var gasolina = 0f
-    var encendido = false
+* Recargar gasolina
 
 
-    fun encender(){
-        encendido=true
-    }
-
-    fun apagar(){
-        encendido=false
-    }
-
-    fun recargar(litros:Float){
-        gasolina+=litros
-    }
-}	
-```
-
-</details>
-
-2. crear un objeto de Vehículo y setear los datos de tu coche:
+2. crear un objeto de Vehículo y agregar los siguientes datos a el carro:
 * color
 * marca
 * modelo
 * placas
 
-<details>
-	<summary>Solución</summary>
-	
-```kotlin
-   val miVehiculo = Vehiculo()
 
-    miVehiculo.color="Verde"
-    miVehiculo.marca="Ford"
-    miVehiculo.modelo="Focus"
-    miVehiculo.placas="REM-4123"
-```
-</details>
+3. Verificar en nivel del tanque imprimiendo la cantidad de gasolina, recargar unos cuantos litros y después volver a consultar
 
-3. Checar si el coche está encendido (imprimiendo el status del coche), encender el cocche y volver a checar 
-
-<details>
-	<summary>Solución</summary>
-	
-```kotlin
-    println("El coche está prendido? ${miVehiculo.encendido}")
-    miVehiculo.encender()
-    println("El coche está prendido? ${miVehiculo.encendido}")
-```
-
-</details>
-
-4. Verificar en nivel del tanque imprimendo la cantidad de gasolina, recargar unos cuantos litros y después volver a consultar
-
-<details>
-	<summary>Solución</summary>
-	
-```kotlin
-    println("El tanque tiene ${miVehiculo.gasolina}")
-    miVehiculo.recargar(20.07f)
-    println("El tanque tiene ${miVehiculo.gasolina}")
-```
-
-</details>
+[`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)
 

@@ -109,6 +109,14 @@ El resultado es el siguiente:
 
 >el teléfono esta Encendido
 
+Observemos que para acceder a los métodos o atributos de un objeto usamos la notación punto con la siguiente sintaxis:
+
+```kotlin
+    <Objeto>.<atributo/método>
+```
+
+[`Atrás`](../Readme.md) | [`Siguiente`](../Reto-01)
+
 
 
 

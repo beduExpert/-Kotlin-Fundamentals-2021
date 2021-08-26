@@ -87,3 +87,5 @@ mario.collision("Star")
 ```
 
 </details>
+
+[`Atrás`](../Ejemplo-03) | [`Siguiente`](../Readme.md)

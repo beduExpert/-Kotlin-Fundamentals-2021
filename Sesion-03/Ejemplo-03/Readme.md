@@ -242,7 +242,6 @@ y reproducimos:
 > Te quedan 0 vidas
 
 
-
-
+[`Atrás`](../Reto-02) | [`Siguiente`](../Reto-03)
 
 

@@ -176,7 +176,7 @@ val pointer = Vehiculo(
 el resultado debe ser impreso sin ningún detalle.
 
 
-
+[`Atrás`](../Reto-01) | [`Siguiente`](../Reto-02)
 
 
 
