@@ -13,23 +13,9 @@
 
 Vamos a perfeccionar la clase Koopa
 
-1. Imprimir el estado de Koopa cada que este cambie (borrar la impresión actual cuando colisiona con un Weapon)
+1. La primera vez que un Koopa colisiona con un Weapon, se vuelve shell: la segunda vez se muere. Reproducir este partón en la clase
 
-<details>
-	<summary>Solución</summary>
-
-```kotlin
-set(value) {
-        field = value
-	println("El estado es ahora $field")
-    }
-```
-
-</details>
-
-2. La primera vez que un Koopa colisiona con un Weapon, se vuelve shell: la segunda vez se muere. Reproducir este partón en la clase
-
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 
 ```kotlin
@@ -40,11 +26,11 @@ if(state=="Shell"){
 }
 ```
 
-</details>
+</details> -->
 
-3. Comprobar los ejercicios anteriores haciendo que un Koopa colisione dos veces con un Weapon.
+2. Comprobar los ejercicios anteriores haciendo que un Koopa colisione dos veces con un Weapon.
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 
 ```kotlin
@@ -61,12 +47,12 @@ en consola se debe reproducir lo siguiente:
 
 > Koopa ha muerto
 
-</details>
+</details> -->
 
-4. A partir de la clase Koopa, crear la clase de Koopas voladores (Koopa paratroopa). Su estado inicial es *Volando*, al colisionar por primera vez camina, a la segunda se vuelve concha y a la tercera muere. <img src="paratroopa.jpg" width="10%"/>
+3. A partir de la clase Koopa, crear la clase de Koopas voladores (Koopa paratroopa). Su estado inicial es *Volando*, al colisionar por primera vez camina, a la segunda se vuelve concha y a la tercera muere. <img src="paratroopa.jpg" width="10%"/>
 
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 
 Primero hay que volver a la clase Koopa *open* y volver la clase estado a *protected*
@@ -100,11 +86,11 @@ class KoopaParatroopa: Koopa() {
 
 }
 ```
-</details>
+</details> -->
 
-5. Comprobar el ejercicio anterior haciendo que un Koopa paratroopa colisione tres veces con un Weapon.
+4. Comprobar el ejercicio anterior haciendo que un Koopa paratroopa colisione tres veces con un Weapon.
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 
 Primero hay que volver a la clase Koopa *open* y volver la clase estado a *protected*
@@ -139,5 +125,6 @@ class KoopaParatroopa: Koopa() {
 
 }
 ```
-</details>
+</details> -->
 
+[`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)

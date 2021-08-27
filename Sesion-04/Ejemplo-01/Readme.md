@@ -3,7 +3,7 @@
 ### OBJETIVO
 
 - Definir clases base que generalicen las propiedades y el comportamiento de una jerarquía
-- Heredar y redefinir miembros de una clase padre.
+- Heredar y redefinir miembros de una clase madre.
 
 #### REQUISITOS
 
@@ -13,7 +13,7 @@
 
 ##### Herencia
 
-Esta es una propiedad de la Programación Orientada a Objetos que permite la creación de clases "hijo" o subclases a partir de una clase "padre" o superclase, esta superclase hereda los atributos y métodos que estén permitidos por encapsulamiento (dependiendo del modificador de acceso asignado a cada propiedad) a sus subclases. Pueden existir varias subclases de una superclase, pero no una subclase con varias superclases.
+Esta es una propiedad de la Programación Orientada a Objetos que permite la creación de clases "hija" o subclases a partir de una clase "madre" o superclase, esta superclase hereda los atributos y métodos que estén permitidos por encapsulamiento (dependiendo del modificador de acceso asignado a cada propiedad) a sus subclases. Pueden existir varias subclases de una superclase, pero no una subclase con varias superclases.
 
 Vamos a crear una clase nueva que servirá de base para todos los enemigos de Mario. ¿Qué cosa tienen en común los enemigos de Mario?
 
@@ -110,7 +110,7 @@ Regresando a nuestra clase *Goomba*, podremos notar que existe ahora otro error 
 
 <img src="imgs/03.png" width="40%"/>
 
-Como podemos ver en la imagen, el error se debe a que nos faltan dos parámetros: *name* y *strength*, que son los parámetros iniciales del constructor de nuestra clase padre. Para corregir este error, debemos crear un constructor para *Goomba* que incluyan dichas variables y asignárselas al constructor de la superclase:
+Como podemos ver en la imagen, el error se debe a que nos faltan dos parámetros: *name* y *strength*, que son los parámetros iniciales del constructor de nuestra clase madre. Para corregir este error, debemos crear un constructor para *Goomba* que incluyan dichas variables y asignárselas al constructor de la superclase:
 
 ```kotlin
 class Goomba(name: String, strength: Int): 
@@ -151,7 +151,7 @@ y corremos:
 
 > Un enemigo ha muerto
 
-Con esto observamos que al construir un objeto derivado, se muestra que el inicializador que corre primero es el de la clase base, y después el del derivado. De la misma forma, todos los atributos y métodos que no son privados, son heredados a la clase hijo, por eso pudimos utilizar varios métodos sin necesidad de declararlos en la clase *Goomba*.
+Con esto observamos que al construir un objeto derivado, se muestra que el inicializador que corre primero es el de la clase base, y después el del derivado. De la misma forma, todos los atributos y métodos que no son privados, son heredados a la clase hija, por eso pudimos utilizar varios métodos sin necesidad de declararlos en la clase *Goomba*.
 
 Como Goomba siempre tendrá el mismo nombre y la misma fuerza, no es necesario recibirlo como parámetro; lo podemos definir desde su constructor: 
 
@@ -242,7 +242,7 @@ override fun collision(collider: String){
 
 > El estado es ahora Shell
 
-
+[`Atrás`](../Readme.md) | [`Siguiente`](../Reto-01)
 
 
 
