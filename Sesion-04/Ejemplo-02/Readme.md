@@ -16,7 +16,7 @@
 
 Una abstracción es la separación, a nivel conceptual, de las propiedades de algo y definirlos a través del pensamiento, aislándolos del mundo sensible. Teniendo en cuenta esto, una clase abstracta permite crear una clase que su objetivo sea definitorio, por lo tanto, las clases abstractas no pueden ser instanciadas.
 
-Dichas clases permiten crear métodos abstractos (que no tienen cuerpo) y métodos concretos (que tienen cuerpo). Cuando existe una jerarquía de clases que comparten un método, pero la forma de implementarla es totalmente distinta en todas las subclases, es innecesario que la clase padre defina la implementación.Las clases abstractas tienen las siguientes características:
+Dichas clases permiten crear métodos abstractos (que no tienen cuerpo) y métodos concretos (que tienen cuerpo). Cuando existe una jerarquía de clases que comparten un método, pero la forma de implementarla es totalmente distinta en todas las subclases, es innecesario que la clase madre defina la implementación.Las clases abstractas tienen las siguientes características:
 
 - El único propósito de una clase abstracta es heredar a otras clases, por ende no puede ser instanciada.
 - Toda clase que tenga un miembro abstracto, debe declararse abstracta.
@@ -48,19 +48,15 @@ class Travel {
             println("""¡Ya reservaste tu viaje! 
                        País: $country
                        Ciudad: $city
-                       Precio: $paidAmount""".trimMargin())
-            return
-        }
-        val amount = getPrice(numDays)
-        if(amount==0){
+                       Precio: $paidAmount""")
             return
         }
         reserved = true
-        paidAmount = amount
+        paidAmount = getPrice(numDays)
         println("""¡Viaje reservado exitosamente! 
                        País: $country
                        Ciudad: $city
-                       Precio: $paidAmount""".trimMargin())
+                       Precio: $paidAmount""")
     }
 }
 ```
@@ -69,7 +65,7 @@ Todo bien, espera... aún no podemos implementar la cotización del viaje! esto 
 
 - Esta clase en sí, no será instanciada, pues su único propósito es plantear un modelo general para las clases que sí usaremos.
 - Los métodos ***quotePrice()*** y ***getPrice()*** (el método para cotizar el precio y para obtener la cantidad, respectivamente), no puede ser definido porque será diferente en cada clase hija.
-- los atributos ***city*** y ***country*** no tienen qué ser implementados en esta clase.
+- los atributos ***city*** y ***country*** no tienen qué ser definidos en esta clase, sino que se definen en las hijas.
 
 Con estas características se deduce que requerimos usar una clase abstracta! 
 
@@ -81,6 +77,9 @@ abstract class Travel {
     ...
 
     abstract fun quotePrice(numDays:Int){
+    }
+
+    abstract fun getPrice(numDays:Int):Int{
     }
 }
 ```
@@ -117,7 +116,7 @@ Ahora vamos a crear una clase para representa el servicio de viajes nacionales, 
 
 <img src="imgs/implementMembers.gif" width="80%"/>
 
-En esta animación, vemos un error al declarar *National* como hijo de *Travel*, que es no implementar los miembros abstractos, por lo que podemos hacerlo automáticamente con la ayuda de la IDE o manualmente. Notaremos el modificador *override*, que en este caso, se emplea para implementar los miembros abstractos de una clase abstracta.
+En esta animación, vemos un error al declarar *National* como hija de *Travel*, que es no implementar los miembros abstractos, por lo que podemos hacerlo automáticamente con la ayuda de la IDE o manualmente. Notaremos el modificador *override*, que en este caso, se emplea para implementar los miembros abstractos de una clase abstracta.
 
 Ahora haremos algunos cambios en la clase. Este servicio cuenta con los siguientes destinos a México:
 
@@ -193,17 +192,17 @@ Las interfaces pueden contener atributos y métodos abstractos, pero en este cas
 - Una clase puede implementar muchas interfaces, y pueden convivir con una clase que herede de otra
 - Una interfaz puede implementarse en otra interfaz
 
-Las interfaces se utilizan para asegurar se que una clase implemente los miembros requeridos normalmente para un tipo de característica en concreto.
+Las interfaces se utilizan para asegurar que una clase implemente los miembros requeridos normalmente para un tipo de característica en concreto.
 
 Vamos a crear una interfaz que defina las características de algún servicio con promoción para fechas bajas que sólo pueden ser en vuelos nacionales.
 
 ```kotlin
 interface IPromotion {
     val discount: Int //el descuento en porcentaje o en cantidad
-    val typeDiscount: Int //porcentaje o cantidad
+    val typeDiscount: Boolean //si es porcentaje (true) o cantidad (false)
 
     fun getDiscountPrice(amount:Int): Int{ //obtener el precio real ya con el descuento
-        return if(typeDiscount == 0) { //0 es porcentaje
+        return if(typeDiscount) { //true es porcentaje
             (amount * (100-discount))/100
         } else{ //cantidad específica
             amount - discount
@@ -216,7 +215,7 @@ Ahora creamos una nueva clase que permita viajes nacionales en temporadas bajas:
 ```kotlin
 class NationalLowSeason(city: String) : National(city),IPromotion {
     override  val discount = 10 //es porcentaje, o sea 10%
-    override val typeDiscount = 0 //0 para porcentaje, 1 para cantidad
+    override val typeDiscount = true
 
     override fun getPrice(numDays: Int): Int {
         val amount = super.getPrice(numDays)
@@ -225,7 +224,7 @@ class NationalLowSeason(city: String) : National(city),IPromotion {
 }
 ```
 
-Como vemos, una clase que implementa una interfaz puede convivir con la herencia de otra clase sea abstracta o concreta. La otra observación es que sobreescribimos la función **getPrice()** para poder devolver el precio con descuento, y utilizamos el método implementado en la interfaz.
+Como vemos, una clase que implementa una interfaz puede convivir con la herencia de otra clase sea abstracta o concreta. La otra observación es que sobre escribimos la función **getPrice()** para poder devolver el precio con descuento, y utilizamos el método implementado en la interfaz.
 
 Volvemos a hacer el viaje a monterrey por 4 días en temporada baja:
 
@@ -242,16 +241,6 @@ El resultado es el siguiente:
                        Precio: 1440
 
 Que es el precio con el descuento del 10% ($1440).
-
-### Diferencias entre clases abstractas e interfaces
-
-| Clases abstractas  | Interfaces |
-| ------------- | ------------- |
-| Una clase sólo puede heredar de una abstracta | puede implementársele múltiples a una clase  |
-| puede heredar de una sola clase (abstracta o concreta)  | Puede implementar una sola interfaz |
-| Se requiere el keyword ***abstract*** para definir un miembro abstracto |  el keyword es opcional pues ya viene por defecto |
-
-
 
 [`Atrás`](../Reto-01) | [`Siguiente`](../Reto-02)
 

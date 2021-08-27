@@ -14,9 +14,9 @@
 
 ##### Data class
 
-Un Data class es una clase que tiene como único objetivo es cargar información en una clase a través de su constructor, sin poder definir métodos para modificar o eliminar sus datos.
+Un Data class es una clase que tiene como único objetivo cargar información en una clase a través de su constructor, sin poder definir métodos para modificar o eliminar sus datos.
 
-Su definición y declaración sucede a través del constructor de la clase, pero con el modificador **data**.
+Su definición sucede a través del constructor de la clase, pero con el modificador **data**.
 ```kotlin
 data class Movie(
     val name: String,
@@ -143,7 +143,7 @@ En lenguajes de programación como java existe un modificador de acceso llamado 
 
 * Es un singleton, o sea, tenemos acceso a una sola instancia del objeto.
 * No se pueden crear companion objects anidados
-* Al heredar ode otra clase y crear una companion object sobre esta, el companion del padre queda obsoleto.
+* Al heredar de otra clase y crear un companion object sobre ésta, el companion de la madre queda obsoleto.
 
 
 Ejemplo:

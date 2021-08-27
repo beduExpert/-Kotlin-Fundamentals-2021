@@ -10,9 +10,9 @@
 
 #### DESARROLLO
 
-1. Crear la clase International para viajes internacionales, contemplar que ahora el usuario proporciona el nombre del País y la Ciudadd
+1. Crear la clase International para viajes internacionales, contemplar que ahora el usuario proporciona el nombre del País y la Ciudad.
 
-<details>
+<!-- <details>
 	<summary>Respuesta</summary>
 
 La clase con los métodos implementados de Travel quedarían así: 
@@ -28,12 +28,12 @@ class International(override val country: String, override val city: String) : T
 }
 ```
 
-</details>
+</details> -->
 
 2. Existe un miembro en la clase **Travel** que a pesar de ser abstracta, podría ser idéntica tanto en *National* como en *International*, ¿Cuál es? descúbrela, agrega el cuerpo en la clase abstracta y elimínala de sus hijos.
 
 
-<details>
+<!-- <details>
 	<summary>Respuesta</summary>
 
 el método para cotizar implementado en National, se puede usar también en International, por lo tanto sustituir el método abstracto de **Travel** por:
@@ -51,7 +51,7 @@ el método para cotizar implementado en National, se puede usar también en Inte
 
 Borrar sus definiciones tanto en **National** como en **International**
 
-</details>
+</details> -->
 
 3. Debemos establecer los impuestos por país, y las ciudades a donde viajar:
 
@@ -59,14 +59,12 @@ Borrar sus definiciones tanto en **National** como en **International**
 	* Munich, $980 por día
 	* Berlín, $820 por día
 	* Francfort, $850 por día
-
 * Chile cobra únicamente el 5% como impuesto y sus ciudades son:
 	* Santiago, $643 por día
 	* Valparaíso, $721 por día
-* Canadá cobra el 10% de impuesto y las ciudades a visitar son:
-	* Vancouver, $620 por día
-	* Ottawa, $680 por día
-	* Montreal, $600 por día
+* Argentina cobra el 10% de impuesto y las ciudades a visitar son:
+	* Buenos Aires, $620 por día
+	* Córdoba, $680 por día
 	
 	
 Declaramos estos atributos
@@ -96,7 +94,7 @@ Declaramos estos atributos
 
 Redefinir la función *getPrice()* para que se obtenga el precio de un viaje con impuesto incluído. Hacer pruebas.
 
-<details>
+<!-- <details>
 	<summary>Respuesta</summary>
 
 ```kotlin
@@ -131,59 +129,9 @@ Redefinir la función *getPrice()* para que se obtenga el precio de un viaje con
     }
 ```
 
-</details> 
+</details>  -->
 
-4. crear una interfaz que permita cancelar viajes. Implementarlo en la clase ***NationalLowSeason***. Hacer pruebas.
 
-<details>
-	<summary>Respuesta</summary>
-
-Creamos la interfaz 
-```kotlin
-interface Cancellable {
-
-    fun cancelTravel()
-
-}
-```
-
-La clase nueva sería la siguiente:
-
-```kotlin
-class NationalLowSeason(city: String) : National(city),IPromotion,Cancellable {
-    override  val discount = 10 //es porcentaje, o sea 10%
-    override val typeDiscount = 0 //0 para porcentaje, 1 para cantidad
-
-    override fun getPrice(numDays: Int): Int {
-        val amount = super.getPrice(numDays)
-        return if (amount == 0) 0 else getDiscountPrice(amount)
-    }
-
-    override fun cancelTravel() {
-        if(reserved){
-            reserved = false
-            paidAmount=0
-            println("Viaje cancelado exitosamente!")
-        } else{
-            println("Este viaje aún no ha sido reservado")
-        }
-    }
-}
-```
-
-Se utilizó este código para verificar que la clase estuviera bien implementada
-
-```kotlin
-    val viajeBajaGdl = NationalLowSeason("Guadalajara")
-    viajeBajaGdl.reserve(4)
-    viajeBajaGdl.cancelTravel()
-    viajeBajaGdl.cancelTravel()
-    viajeBajaGdl.reserve(2)
-```
-
-Se reservó un viaje y se cancelo dos veces la reserva: la primera cancelación pasó, la segunda no se realizó porque ya no había ningún viaje reservado. Se pudo volver a Reservar con éxito.
-	
-</details>
 
 [`Atrás`](../Ejemplo-02) | [`Siguiente`](../Ejemplo-03)
 
