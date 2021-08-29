@@ -1,102 +1,90 @@
-## Inline functions
+## Operaciones funcionales
 
 ### OBJETIVO
 
-- Aplicar el keyword inline para depurar espacio en memoria cuando se cree una función de orden superior
+- Utilizar una serie de funciones implementadas en kotlin para el tratamiento de información, con aproximación a programación funcional.
 
 #### REQUISITOS
 
-1. Crear funciones que reciban funciones como parámetros
-
+1. Haber integrado colecciones en Kotlin.
+2. Saber implementar conceptos básicos de programación funcional.
 
 #### DESARROLLO
 
-En el [Ejemplo 1](../Ejemplo-01) utilizamos lambdas y high order functions (HFO) para realizar distintas operaciones dependiendo de lo que se requiriera. las funciones de orden superior son un gran agente para la programación funcional porque controla el flujo de datos a traves funciones, recibiendo la indicada según sea el caso. Uno de los problemas que nos representa su uso, es que en términos de lenguaje Java, dicha función se vuelve un objeto, y se crea una instancia de este aunque la función no se haya invocado; esto gasta espacio en memoria que puede traducirse en realentización de tu aplicación. 
+##### Filter
 
-Si creamos esta función de orden superior
-```kotlin
-fun nonInlined(runLambda(): () -> Unit) {
-    println("Antes de correr la función recibida")
-    runLambda()
-    println("después de correr la función recibida")
-}
-```
+Esta función de orden superior se encuentra en colecciones como listas o mapas, y filtra sólo los datos mediante un predicado, que no es más que una función lambda que toma un elemento de la colección y devuelve un Booleano, `Filter` se queda solo con los elementos que la evaluación del predicado dio `true`.
 
-Al meternos en el bytecode, podemos leer algo similar a esto (simplificado para mejor entendimiento.)
-
-```java
-public void nonInlined(Function runLambda()) {
-    System.out.println("Antes de correr la función recibida");
-    runLambda.invoke();
-    System.out.println("Después de correr la función recibida");
-}
-```
-
-Pero al implementar el HOF pasándole una lambda
+Supongamos que tenemos una lista de calificaciones y queremos filtrar únicamente las calificaciones que pasan, para esto, fijamos el 6 como el mínimo aprobatorio.
 
 ```kotlin
-inlined {
-    println("Llamando a la función noninlined")
-}
+val calificaciones = listOf(10,8, 9 ,5,3,2,5,1,7,6,9,4,10,3,6,2,6,5)
 ```
 
-, se crea un nuevo objeto de acuerdo al bytecode:
+esta es nuestra lista de calificaciones. De forma imperativa, podríamos haber filtrado los valores iterando la lista y con un if, agregar únicamente a los que pasaban la condición:
 
-```java
-nonInlined(new Function() {
-    @Override
-    public void invoke() {
-        System.out.println("Llamando a la función noninlined");
+```kotlin
+ var aprobados = mutableListOf<Int>()
+    for (calificacion in calificaciones){
+        if(calificacion>5){
+            aprobados.add(calificacion)
+        }
     }
-});
+    println(aprobados)
 ```
 
+A simple vista vemos que esta opción es bastante verbosa e ineficiente, puesto que declaramos una lista mutable y en cada iteración se cambia su valor.
 
-Java también crea un objeto Function para guardar la función 
+La aproximación funcional de este ejercicio no itera de forma explicita sobre la lista, sino que simplemente ve cuales de los elementos cumplen el predicado.
 
 ```kotlin
-nonInlined(new Function() { //este new Function es la instancia que consume espacio innecesario en memoria
-    @Override
-    public void invoke() {
-        System.out.println("do something here");
-    }
-});
+val aprobados = calificaciones.filter{ calificacion -> calificacion>5}
+println(aprobados);
 ```
-
-Es por esto que es recomendable utilizar el keyword *inline*. Con esto, lo que se hace es que, en vez de crear una clase para nuestra función e invocarla cuando se mande a llamar, el código dentro del inline function se copia y pega en cada implementación del high order function, dando como desventaja el agrandamiento del código.
-
+Podríamos tener una versión más corta de la lambda con el uso de ***it***
 
 ```kotlin
-inline fun inlined(runLambda(): () -> Unit) {
-    println("Antes de correr la función recibida")
-    runLambda()
-    println("después de correr la función recibida")
-}
-
+val aprobados = calificaciones.filter{ it>5}
 ```
-Al llamarlo de esta forma:
+
+con la función ***partition*** podremos separar en dos arreglos las calificaciones aprobadas de las reprobadas.
 
 ```kotlin
-inlined {
-    println("Llamando a la función inlined")
-}
+  val (notasAprobadas2,notasReprobadas) = calificaciones.partition { it>5}
+    println(notasAprobadas2);
+    println(notasReprobadas);
 ```
 
-Observamos aquí que en vez de crearse una instancia, se copió y pegó el código en el inline con la lambda incluída
+También podemos filtrar maps. 
 
 ```kotlin
-System.out.println("before");
-System.out.println("do something here");
-System.out.println("after");
+val numbersMap =  mapOf("Lorenza" to 6, "Juan" to 4, "Martina" to 8, "David" to 7)
 ```
 
-En caso de requerir que algún parámetro no se someta a inline, debemos usar el keywordd ***noninline*** en él:
+si quisieramos saber la calificación de alguien específico, podemos hacer lo siguiente:
 
 ```kotlin
-inline fun foo(inlined: () -> Unit, noinline notInlined: () -> Unit) { ... }
+   val notasAlumnos =  mapOf("Lorenza" to 6, "Juan" to 4, "Martina" to 8, "David" to 7)
+     val porNombre = notasAlumnos.filter { (key, value) ->  key == "David"}
+    println(porNombre)
 ```
 
-***NOTAS***
+##### Map
 
-* No utilizarlos en HOF muy grandes, ya que este alargaría más el bytecode por cada implementación del inline function.
-* Utilizarlos en funciones que no reciban funciones como parámetros no tiene ninguna ventaja.
+Esta es una *Collection Transformation* que crea colecciones a partir del resultado de operaciones hechas por una función lambda. 
+
+`map` aplica una función a cada elemento de la colección y nos regresa la colección resultante.
+
+Así, si tenemos una colección de precios libres y necesitamos sumarle el IVA del 16%, podemos hacer lo siguiente: 
+
+```kotlin
+    val preciosLibres = setOf(1024.0, 2408.5, 8224.33)
+    val preciosFinales = preciosLibres.map { it * 1.16 }
+    println(preciosFinales)
+```
+
+[`Atrás`](../Ejemplo-02) | [`Siguiente`](../Reto-02)
+
+
+
+

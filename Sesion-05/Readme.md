@@ -10,12 +10,12 @@
 - [Ejemplo 01: Funciones literales y Funciones de orden superior](Ejemplo-01)
 	- [Reto 01](Reto-01)
 		
-- [Ejemplo 02: Inline functions](Ejemplo-02)
+<!-- - [Ejemplo 02: Inline functions](Ejemplo-02) -->
 		
-- [Ejemplo 03: Operaciones funcionales](Ejemplo-03)
+- [Ejemplo 02: Operaciones funcionales](Ejemplo-03)
 	- [Reto 02](Reto-02)
 
-- [Reto final - Implementando Programación funcional](Reto-final)
+<!-- - [Reto final - Implementando Programación funcional](Reto-final) -->
 
 <!-- - [Postwork](Postwork) -->
 
