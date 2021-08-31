@@ -19,9 +19,9 @@
 	- procesador
 
 Y los siguientes métodos:
-	getPrice()
-	getName()
-	getModel()
+	- getPrice()
+	- getName()
+	- getModel()
 	
 <!-- <details>
 	<summary>Solucion</summary>
