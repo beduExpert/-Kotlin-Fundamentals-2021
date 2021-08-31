@@ -121,7 +121,7 @@ public class Main {
 
 Para llamar al método ***generate()***, tenemos que llamar a un objeto intermedio *Companion* , y en el caso de nuestro atributo ***initialPhrase***, llamamos a su getter.
 
-Podemos evitar el código verborrágico para obtener el valor de ***initialPhrase*** mediante la anotación ***@JvmField*** en el archivo de kotlin:
+Podemos evitar el código verboso para obtener el valor de ***initialPhrase*** mediante la anotación ***@JvmField*** en el archivo de kotlin:
 
 ```kotlin
 ...
@@ -135,4 +135,4 @@ y se manda a llamar en Java como:
 	System.out.println(RandomGenerator.initialPhrase);
 ```
 
-
+[`Atrás`](../Ejemplo-02) | [`Siguiente`](../Reto-02)

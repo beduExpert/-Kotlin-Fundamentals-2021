@@ -13,17 +13,17 @@
 
 1. Crear una clase ***SmartPhone*** en Java que contenga los siguientes campos:
 
-	precio
-	nombre
-	modelo
-	procesador
+	- precio
+	- nombre
+	- modelo
+	- procesador
 
 Y los siguientes métodos:
 	getPrice()
 	getName()
 	getModel()
 	
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 ```java
@@ -54,12 +54,11 @@ public class SmartPhone {
     }
 }
 ```
-</details>
+</details> -->
 	
-2. Crear una variable estática pública en la clase ***stock***, que guarde el número de variables disponibles. Agregar el método estático ***restock()*** para agregar más teléfonos (se suma lo anterior con lo nuevo ingresado) y otro método estático para restarle 
-un elemento al stock. Agregar un getter estático para stock.
+2. Crear una variable estática pública  ***stock*** dentro de la clase, que guarde el número de variables disponibles. Agregar el método estático ***restock()*** para agregar más teléfonos (se suma lo anterior con lo nuevo ingresado) y otro método estático para restarle  un elemento al stock. Agregar un getter estático para stock.
 
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 ```java
@@ -78,12 +77,12 @@ un elemento al stock. Agregar un getter estático para stock.
     }
 ```
 </details>
+ -->
+
+3. Crea una nueva instancia de la clase smartPhone e imprime su precio desde el main de Kotlin.
 
 
-3. Crea una nueva instancia de la clase smartPhone e imprime su precio.
-
-
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 ```kotlin
@@ -96,13 +95,13 @@ val iPhone = SmartPhone(
 
     println(iPhone.price)
 ```
-</details>
+</details> -->
 
 
 
-4. Hacer un restock de 10 elementos, remover dos smartphones del stock, imprimir el stock, resurtir 5 elementos y volver imprimir el stock.
+4. Hacer un restock de 10 elementos, imprimirlo el stock, remover dos smartphones del stock y volver imprimir el stock.
 
-<details>
+<!-- <details>
 	<summary>Solucion</summary>
 	
 ```kotlin
@@ -113,6 +112,6 @@ val iPhone = SmartPhone(
     SmartPhone.restock(5)
     println("Stock actual: ${SmartPhone.getStock()}")
 ```
-</details>
+</details> -->
 
-
+[`Atrás`](../Ejemplo-03) | [`Siguiente`](../Readme.md)

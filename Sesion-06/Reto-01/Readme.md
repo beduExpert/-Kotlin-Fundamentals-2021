@@ -11,9 +11,7 @@
 
 #### DESARROLLO
 
-1. Copiar el código de la clase Java *User* dentro de un archivo kotlin llamado User (vacío). Discutir lo que sucede.
-
-2. Tenemos esta clase Abstracta ***Product*** en Java. 
+1. Tenemos esta clase Abstracta ***Product*** en Java. 
 
 ```java
 public abstract class Product {
@@ -36,7 +34,7 @@ public abstract class Product {
 
 Crear una clase en Kotlin llamado SmartWatch que herede de Product y que devuelva el precio total con base en el precio y la cantidad a comprar (recibido como argumento en el método).
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 
 ```kotlin
@@ -49,11 +47,11 @@ class SmartWatch(
     }
 }
 ```
-</details>
+</details> -->
 
-3. Desde el *main*, crear un nuevo smartwatch y obtener el precio de 2 de estos relojes.
+2. Desde el *main*, crear un nuevo smartwatch y obtener el precio de 2 de estos relojes.
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 
 ```kotlin
@@ -66,6 +64,6 @@ val appleWatch =
 
     println(appleWatch.getTotalPrice(2))
 ```
-</details>
+</details> -->
 
-
+[`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)

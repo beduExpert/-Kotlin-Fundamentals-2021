@@ -179,7 +179,7 @@ Para un booleano, la regla cambia: en vez del keyword ***get***, utilizamos ***i
     user.isMale = false
 ```
 
-
+[`Atrás`](../README.md) | [`Siguiente`](../Reto-01)
 
 
 

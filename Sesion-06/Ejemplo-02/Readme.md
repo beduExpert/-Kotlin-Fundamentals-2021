@@ -75,3 +75,6 @@ Y comprobamos que, para cada propiedad, tenemos un getter y un setter en Java:
 ```
 
 Podremos comprobar que agregando el modificador *data* a nuestra clase en kotlin, el código sigue funcionando.
+
+
+[`Atrás`](../Reto-01) | [`Siguiente`](../Ejemplo-02)
