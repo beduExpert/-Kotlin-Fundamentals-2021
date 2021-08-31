@@ -14,7 +14,7 @@
 - [Ejemplo 03: Miembros estáticos y companion objects](Ejemplo-03)
   - [Reto 02](Reto-02)
   
-- [Reto final](Reto-final)
+<!-- - [Reto final](Reto-final) -->
 <!-- - [Postwork](Postwork) -->
 
 
