@@ -15,7 +15,7 @@
 		
 - [Ejemplo 03: Casts](Ejemplo-03)
 
-- [Reto final - Implementando Programación funcional](Reto-Final)
+<!-- - [Reto final - Implementando Programación funcional](Reto-Final) -->
 
 <!-- - [Postwork](Postwork) -->
 

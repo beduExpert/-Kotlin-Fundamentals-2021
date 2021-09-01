@@ -20,7 +20,7 @@ Todas las clases de excepción en kotlin heredan de la clase Throwable. Cada exc
 	throw Exception("Excepción genérica")
 ```
 
-Por supuesto, Kotlin tiene una lista extensa de errores para arrojar. Haciendo referencia al [Reto 1](../Reto-01), encontramos esta excepción
+Por supuesto, Kotlin tiene una lista extensa de errores para arrojar se pueden consultar en la siguiente [liga](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/#exceptions). Por ejemplo:
 
 ```kotlin
 	throw IllegalArgumentException("Necesitas apellidos")
@@ -197,4 +197,4 @@ Cuando llames a esta función, el compilador sabrá que la ejecución no contin�
 	val s = person.name ?: fail("Name required")
 ```
 
-Ahora vemos que de esta forma, con ayuda del tipo Nothing, combinándolo con el uso de Elvis, podemos mejorar nuestro código para lanzar excepciones, completa el [Reto 02](/../../tree/master/Sesion-07/Reto-02/) y pon en práctica lo que acabas de aprender.
+[`Atrás`](../Reto-01) | [`Siguiente`](../Reto-02)

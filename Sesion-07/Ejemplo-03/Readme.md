@@ -21,8 +21,6 @@ El operador ***is*** permite saber si una variable tiene un tipo de dato asignad
     }
 ```
 
-si el objeto no es una String, se informa;.
-
 Ahora, creamos una funcion que arroje un resultado numérico con base en su tipo de dato:
 
 ```kotlin
@@ -30,7 +28,7 @@ fun imprimirNumerico(x: Any) {
     when (x) {
         is Int -> println(x + 1)
         is String -> println(x.length + 1)
-        is IntArray -> println(x.sum())
+        is Boolean -> if(x) println(1) else println(0)
     }
 }
 ```
@@ -39,11 +37,11 @@ Para probar el código utilizamos:
 
 ```kotlin
 imprimirNumerico(20)
-imprimirNumerico("asereje")
-imprimirNumerico(intArrayOf(2,4,6))
+imprimirNumerico("Bedu")
+imprimirNumerico(true)
 ```
 
-Si observamos el código anterior, x es cualquier tipo de valor, pero aen el when, al verificar que sea Int, hace una suma como si de un entero se tratase; si es String, saca la longitud como si de una String se tratace y hace una sumatoria en caso de un IntArray. En los 3 casos se toma la variable x con un tipo propio, no como su tipo predefinido Any, esto se debe a que el operador is hace un casting automático, por eso lo llaman Smart Cast. Estos smart casts tienen sus limitaciones, pero es bastante util.
+Si observamos el código anterior, x es cualquier tipo de valor, pero en el when siempre regresamos un valor entero. En los 3 casos se toma la variable x con un tipo propio, no como su tipo predefinido Any, esto se debe a que el operador is hace un casting automático, por eso lo llaman Smart Cast. Estos smart casts tienen sus limitaciones, pero es bastante util.
 
 ### Unsafe Cast
 
@@ -68,6 +66,7 @@ val str: String? = obj2 as? String
 println(str)
 ```
 
+[`Atrás`](../Reto-02) | [`Siguiente`](../Readme.md)
 
 
 

@@ -11,14 +11,14 @@
 
 ### DESARROLLO
 
-Una de las dificultades más comunes en muchos lenguajes de programación, incluido Java, es que al acceder a un miembro de una referencia nula, dará como resultado una excepción de apuntador nulo, esto se refiere a que la . En Java, esto sería el equivalente de a NullPointerException NPE para abreviar.
+Una de las dificultades más comunes en muchos lenguajes de programación, incluido Java, es que al acceder a un miembro de una referencia nula, dará como resultado una excepción de apuntador nulo, esto se refiere a que la referencia no fue encontrada. En Java, esto sería el equivalente de a NullPointerException NPE para abreviar.
 
 En Kotlin, el sistema de tipos distingue entre referencias que pueden contener nulo (referencias anulables) y aquellas que no pueden (referencias no nulas). Por ejemplo, una variable de tipo regular String no puede contener nulo :
 
 ```kotlin
     val text: String = "String no nullable"
 
-    //No se puede asugnar null a "a"
+    //No se puede asugnar null a text
     text = null // error de compilacion
 ```
 
@@ -29,7 +29,7 @@ Para que el tipo de dato permita un valor nulo, debemos utilizar el operador *?*
      nullableText = null
     println(nullableText)
 ```
-la función ***println*** tiene la capacidad de valores nulos.
+la función ***println*** tiene la capacidad de imprimir valores nulos.
 
 
 Ahora bien, si ya tenemos una variable declarada como nullable ya no podemos hacer la llamada a sus métodos de forma directa como si de una variable no nullable se tratara:
@@ -70,7 +70,7 @@ y genera el siguiente error de sintaxis:
 <img src="./images/01.png" width="95%">
 
 
-En el ejemplo anterior, para acceder a propiedades o métodos de nuestra variable, utilizamos el operador **?**, lo que sucede a continuación es que si nullableText no está vacia (no es nula), entonces va a imprimir el valor que conrresponde a lu propiedad length, de lo contrario veremos una impresión en consola como "null".
+En el ejemplo anterior, para acceder a propiedades o métodos de nuestra variable, utilizamos el operador **?**, lo que sucede a continuación es que si nullableText no está vacía (no es nula), entonces va a imprimir el valor que conrresponde a su propiedad length, de lo contrario veremos una impresión en consola como "null".
 ```kotlin
     val nullableText2: String? = null
     ...
@@ -95,4 +95,4 @@ El operador Elvis **?:** hace que lo anterior sea mucho mas sencillo, usándolo 
 
 **?:** se encarga de calcular si el nullable es nulo o no, si lo es, entonces retorna el valor de la derecha, de lo contrario el valor original de la izquierda.
 
-En el [Reto 01](/../../tree/master/Sesion-07/Reto-01/) podras poner en práctica este tema !Éxito¡
+[`Atrás`](../README.md) | [`Siguiente`](../Reto-01)

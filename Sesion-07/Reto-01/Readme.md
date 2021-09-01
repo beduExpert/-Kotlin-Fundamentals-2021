@@ -22,7 +22,7 @@ Tenemos una lista de nombres
 
 1. Mediante el método forEach, imprimir unicamente los valores no nulos mediante comprobación de nulos en condiciones y por safe calls.
 
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 	
 ```kotlin
@@ -37,11 +37,11 @@ Tenemos una lista de nombres
     names.forEach { it?.let { println(it) } }	
 ```
 
-</details>
+ </details> -->
 
 2. Por medio del operador Elvis, imprimir todos los nombres anteriores. En caso de tener un nombre nulo, imprimir un mensaje notificando que la casilla esta vacía.
 
-<details>
+<!--<details>
 	<summary>Solución</summary>
 	
 ```kotlin
@@ -53,19 +53,11 @@ Tenemos una lista de nombres
     }
 ```
 
-</details>
+</details> -->
 
-3. Crear una clase *Person* que su constructor tenga como parámetros nombre y apellido. El apellido es opcional y si no se setea, es nulo. implementar dos métodos: una que regrese el apellido y si es nulo, regresar un mensaje avisando la omisión: el segundo que regrese el nombre entero y si no, arrojar un error de argumento inválido. Utilizar el operador elvis.
+3. Crear una clase *Person* que su constructor tenga como parámetros nombre y apellido. El apellido es opcional y si no se setea, es nulo. implementar dos métodos: una que regrese el apellido y si es nulo, regresar un mensaje avisando la omisión: el segundo que regrese el nombre entero y si no tiene apellido que solo regrese el nombre.
 
-***Nota:*** el lado derecho del operador elvis puede servir para regresar valores o arrojar excepciones
-
-la excepción arrojada podría ser la siguiente:
-
-```kotlin
-throw IllegalArgumentException("Necesitas apellidos")
-```
-
-<details>
+<!-- <details>
 	<summary>Solución</summary>
 	
 ```kotlin
@@ -86,12 +78,12 @@ throw IllegalArgumentException("Necesitas apellidos")
 }
 ```
 
-</details>
+</details> -->
 
 4. Probar la clase anterior con una persona con apellido, y la otra sin apellidos. Utilizar los dos métodos creados para ambos casos.
 
 
-
+[`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)
 
 
 
