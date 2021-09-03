@@ -58,4 +58,8 @@ runBlocking {     // bloquear el hilo donde se corre
 println("bloqueo por corrutina de 2 segundos finalizado")
 ```
 
+>Nota: Debemos importar `rubBlocking`
+
 por lo tanto, esperaremos los dos segundos que tarda nuestra rutina en finalizar para reanudar nuestro hilo principal.
+
+[`Atrás`](../README.md) | [`Siguiente`](../Reto-01)

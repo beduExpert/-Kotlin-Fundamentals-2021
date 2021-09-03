@@ -17,7 +17,7 @@
 * La Ps4 cuesta $5299 y el servidor tarda 3 segundos en obtener el precio
 * El scooter cuesta $2400 y el servidor tarda 2 segundos en obtener el precio
 
-<details>
+<!-- <details>
 	<summary>solucion</summary>
 	
 ```kotlin
@@ -34,11 +34,11 @@ suspend fun getPs4Price():Long{
 }
 ```
 
-</details>
+</details> -->
 
-2. Obtener el precio del scooter en la función main() e imprimirlo en pantalla
+2. Obtener el precio del scooter e imprimirlo en pantalla
 
-<details>
+<!-- <details>
 	<summary>solucion</summary>
 	
 ```kotlin
@@ -48,13 +48,13 @@ suspend fun getPs4Price():Long{
     }
 ```
 
-</details>
+</details> -->
 
 
 3. Obtener el precio de la ps4 y el scooter, imprimirlo en pantalla
 
 
-<details>
+<!-- <details>
 	<summary>solucion</summary>
 	
 ```kotlin
@@ -67,11 +67,11 @@ runBlocking {
     }
 ```
 
-</details>
+</details> -->
 
 4. Existe una forma de obtener resultados de forma asíncrona. el método ***async*** lanza una corrutina, como *launch*, la diferencia es que, en vez de regresar un Job, regresa un Deferred (un objeto que representa una promesa de retornar un resultado en algún momento). en el Deferred, viene un método ***await()*** que devuelve el resultado. Con esta información, obtener el valor de los dos productos de forma asíncrona para luego sumarlos e imprimirlos en pantalla.
 
-<details>
+<!-- <details>
 	<summary>solucion</summary>
 	
 ```kotlin
@@ -84,6 +84,7 @@ runBlocking {
     }
 ```
 
-</details>
+</details> -->
 
-5. con la función de orden superior ***measureTimeMillis*** se puede obtener el tiempo durante la ejecución de una operación. Imprimir el tiempo en que se tarda en ejecutar los dos ejercicios anteriores, comparar los tiempos y discutir la diferencia entre estos dos.
+
+[`Atrás`](../Ejemplo-02) | [`Siguiente`](../Readme.md)

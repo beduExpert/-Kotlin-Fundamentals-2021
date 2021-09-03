@@ -17,22 +17,22 @@ Comenzaremos intentando probar métodos de hilos y rutinas fuera de contexto
 
 - Utilizar la función de suspensión ***delay()*** dentro del hilo principal, comentar lo que sucede y su causa.
 
-<details>
+<!-- <details>
 	<summary>respuesta</summary>
 	
 Nos arroja el siguiente error:
 
 > Suspend function 'delay' should be called only from a coroutine or another suspend function
 
-</details>
+</details> -->
 
 - Lanzar una corrutina y dentro de ella, suspender el hilo por un segundo. Comentar el resultado y su causa.
 
-<details>
+<!-- <details>
 	<summary>respuesta</summary>
 Al parecer, el thread principal no para, debido a que pese a que la corrutina se lanzó desde este, el hilo donde corre es otro, este hilo soporta muchas corrutinas.
 
 </details>
+ -->
 
-
-
+[`Atrás`](../Ejemplo-01) | [`Siguiente`](../Ejemplo-02)

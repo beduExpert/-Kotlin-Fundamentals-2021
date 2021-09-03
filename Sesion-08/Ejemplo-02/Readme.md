@@ -16,7 +16,7 @@ Este ejemplo se centrará en mostrarnos el performance de múltiples ***threads*
 Creamos primero una función que sea capaz de obtener el tiempo transcurrido durante la ejecución de una tarea. Obtenemos el tiempo actual en milisegundos desde el inicio del bloque y después de su ejecución, después imprimimos el valor.
 
 ```kotlin
-inline fun measureTimeMillis(block: () -> Unit){
+fun measureTimeMillis(block: () -> Unit){
     val start = System.currentTimeMillis()
     block()
     val end = System.currentTimeMillis() - start
@@ -70,4 +70,4 @@ valor del numero: 500000500000
 
 La diferencia es de aproximadamente 58 segundos por la ejecución de una tarea sencilla, pero para tareas más complejas, el costo es mayor.
 
-
+[`Atrás`](../Reto-01) | [`Siguiente`](../Ejemplo-02)

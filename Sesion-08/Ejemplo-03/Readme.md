@@ -21,7 +21,7 @@ Una ***suspend function*** , es aquella función que puede suspender una corruti
 Simularemos una función que busca un producto mediante su id, después de un momento de espera, devuelve la cantidad en stock de un producto. Los procesos se marcan por una impresión en pantalla.
 
 ```kotlin
-fun getInventary(productId:Int):Int{
+fun getInventary(productId:Int){
     println("Buscando producto en el inventario...")
     delay(2000)
     val stock = (0..99).random()
@@ -137,4 +137,5 @@ delay(2000)
 buyJob.cancel()
 ```
 
+[`Atrás`](../Ejemplo-02) | [`Siguiente`](../Reto-02)
 
