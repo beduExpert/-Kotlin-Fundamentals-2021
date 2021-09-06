@@ -26,5 +26,6 @@ Al finalizar el módulo el alumno será capaz de utilizar la sintáxis básica d
  - [`Sesión 6:` Interoperabilidad Kotlin-Java - Recicla y utiliza elementos Java en Kotlin](Sesion-06): 
  - [`Sesión 7:` Manejo de errores  - Controla los errores y excepciones para evitar bugs](Sesion-07): 
  - [`Sesión 8:` Programación asíncrona - Maneja operaciones de larga duración y pesadas sin congelar tu aplicación](Sesion-08): 
+ - [`Círculo de Estudio:` Proyecto Práctico](circulo.md): 
 
 
